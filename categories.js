@@ -2,8 +2,8 @@ const categories = [
   { id:"glosy_niebios", name:"Głosy z Niebios", type:"video", items:[
     {id:"buszonbek", title:"Człowieku", src:"clips/clip.mp4"},
     {id:"pomozmi", title:"Pomóż mi", src:"clips/glosy2.mp4"},
-    {id:"sa2", title:"Szejson moment 2", src:"clips/glosy3.mp4"},
-    {id:"sa2", title:"Szejson moment 2", src:"clips/glosy4.mp4"}
+    {id:"sa2", title:"Antol Zacinak", src:"clips/glosy3.mp4"},
+    {id:"sa2", title:"działający mikrofon", src:"clips/glosy4.mp4"}
   ]},
   { id:"best_scream", name:"Najlepszy Krzyk", type:"video", items:[
     {id:"krzyk1", title:"Krzyk level 100", src:"clips/clip.mp4"},
