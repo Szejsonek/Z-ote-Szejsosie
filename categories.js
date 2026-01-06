@@ -20,6 +20,13 @@ const categories = [
     {id:"majaskinwalker", title:"maja i skinwalker", src:"clips/krzyk4.mp4"},
     {id:"majagenshin", title:"Maja i Przygoty Genshińskie", src:"clips/krzyk5.mp4"}
   ]},
+    { id:"300iq", name:"Szejson Activity", type:"video", items:[
+    {id:"dobrabuszon", title:"dobra buszon", src:"clips/szej.mp4"},
+    {id:"julkawrona", title:"Julka Wrona", src:"clips/szej2.mp4"},
+    {id:"julkaaaaaaaaaaaa", title:"julkaaaaaaaaaaaa", src:"clips/szej3.mp4"},
+    {id:"majaskinwalker", title:"maja i skinwalker", src:"clips/szej4.mp4"},
+    {id:"majagenshin", title:"Maja i Przygoty Genshińskie", src:"clips/szej5.mp4"}
+  ]},
   ...Array.from({length:27}).map((_,i)=>({
     id:`category_${i+4}`,
     name:`Kategoria ${i+4}`,
