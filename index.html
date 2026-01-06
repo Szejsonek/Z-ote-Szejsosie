@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Złote Szejsosie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div id="login-screen" class="screen active">
+    <img src="images/logo.png" class="logo" alt="Złote Szejsosie">
+    <h1>Złote Szejsosie</h1>
+    <p>Wpisz swój pseudonim, aby rozpocząć głosowanie</p>
+
+    <input type="text" id="nickname" placeholder="Twój pseudonim">
+    <button onclick="startVoting()">Rozpocznij</button>
+  </div>
+
+  <!-- VOTING -->
+  <div id="voting-screen" class="screen">
+    <header>
+      <img src="images/logo.png" class="logo small">
+      <div id="progress">1 / 1</div>
+    </header>
+
+    <h2 id="category-name"></h2>
+
+    <div id="items" class="items-grid"></div>
+
+    <footer>
+      <button id="next-btn" onclick="nextCategory()" disabled>Dalej →</button>
+    </footer>
+  </div>
+
+  <!-- FINISH -->
+  <div id="finish-screen" class="screen">
+    <h1>Dzięki za głosowanie! 🏆</h1>
+    <p>Twój głos został zapisany</p>
+  </div>
+
+  <script src="categories.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
 
