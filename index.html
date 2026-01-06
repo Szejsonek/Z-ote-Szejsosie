@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Złote Szejsosie</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 </head>
 <body>
 
   <!-- LOGIN -->
   <div id="login-screen" class="screen active">
-    <img src="images/logo.png" class="logo" alt="Złote Szejsosie">
+    <img src="images/logo.png" class="logo">
     <h1>Złote Szejsosie</h1>
-    <p>Wpisz swój pseudonim, aby rozpocząć głosowanie</p>
-
-    <input type="text" id="nickname" placeholder="Twój pseudonim">
-    <button onclick="startVoting()">Rozpocznij</button>
+    <p>Wpisz pseudonim aby zagłosować</p>
+    <input id="nickname" placeholder="Pseudonim">
+    <button onclick="startVoting()">Start</button>
   </div>
 
   <!-- VOTING -->
   <div id="voting-screen" class="screen">
     <header>
       <img src="images/logo.png" class="logo small">
-      <div id="progress">1 / 1</div>
+      <div id="progress"></div>
     </header>
 
     <h2 id="category-name"></h2>
-
     <div id="items" class="items-grid"></div>
 
     <footer>
@@ -37,12 +39,18 @@
 
   <!-- FINISH -->
   <div id="finish-screen" class="screen">
-    <h1>Dzięki za głosowanie! 🏆</h1>
-    <p>Twój głos został zapisany</p>
+    <h1>Dzięki za głosowanie 🏆</h1>
+    <p>Złote Szejsosie 2025</p>
+
+    <div class="finish-images">
+      <img src="images/finish1.jpg">
+      <img src="images/finish2.jpg">
+    </div>
+
+    <p class="small">Wyniki zostaną ogłoszone na gali</p>
   </div>
 
   <script src="categories.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
