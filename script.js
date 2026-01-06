@@ -35,40 +35,34 @@ function startVoting() {
 
 function renderCategory() {
   const screen = document.getElementById("voting-screen");
-  screen.classList.remove("fade-in");
-  screen.classList.add("fade-out");
+  const cat = categories[currentCategory];
+  
+  document.getElementById("category-name").innerText = cat.name;
+  document.getElementById("progress").innerText = `${currentCategory + 1} / ${categories.length}`;
 
-  setTimeout(() => {
-    const cat = categories[currentCategory];
-    document.getElementById("category-name").innerText = cat.name;
-    document.getElementById("progress").innerText = `${currentCategory + 1} / ${categories.length}`;
+  const container = document.getElementById("items");
+  container.innerHTML = "";
+  
+  // nie resetujemy selectedItem tutaj, bo przycisk Dalej odczytuje jego wartość
+  document.getElementById("next-btn").disabled = true;
 
-    const container = document.getElementById("items");
-    container.innerHTML = "";
-    selectedItem = null;
-    document.getElementById("next-btn").disabled = true;
+  cat.items.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "item";
+    div.onclick = () => selectItem(div, item.id);
 
-    cat.items.forEach(item => {
-      const div = document.createElement("div");
-      div.className = "item";
-      div.onclick = () => selectItem(div, item.id);
-
-      if (cat.type === "video") {
-        if (item.src.includes("outplayed.tv")) {
-          div.innerHTML = `<img src="images/logo.png"><p>${item.title} (Outplayed)</p>`;
-        } else {
-          div.innerHTML = `<video src="${item.src}" controls></video><p>${item.title}</p>`;
-        }
+    if (cat.type === "video") {
+      if (item.src.includes("outplayed.tv")) {
+        div.innerHTML = `<img src="images/logo.png"><p>${item.title} (Outplayed)</p>`;
       } else {
-        div.innerHTML = `<img src="${item.src}"><p>${item.title}</p>`;
+        div.innerHTML = `<video src="${item.src}" controls></video><p>${item.title}</p>`;
       }
+    } else {
+      div.innerHTML = `<img src="${item.src}"><p>${item.title}</p>`;
+    }
 
-      container.appendChild(div);
-    });
-
-    screen.classList.remove("fade-out");
-    screen.classList.add("fade-in");
-  }, 300);
+    container.appendChild(div);
+  });
 }
 
 function selectItem(div, id) {
@@ -79,7 +73,7 @@ function selectItem(div, id) {
 }
 
 async function nextCategory() {
-  if (!selectedItem) return alert("Musisz wybrać element!"); // blokada na pewno
+  if (!selectedItem) return alert("Musisz wybrać element!");
 
   const cat = categories[currentCategory];
 
@@ -98,11 +92,12 @@ async function nextCategory() {
   }
 
   currentCategory++;
+
   if (currentCategory >= categories.length) {
     document.getElementById("voting-screen").classList.remove("active");
     document.getElementById("finish-screen").classList.add("active");
   } else {
+    selectedItem = null; // teraz resetujemy dopiero po zapisaniu głosu
     renderCategory();
   }
 }
-
