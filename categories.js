@@ -13,9 +13,12 @@ const categories = [
     {id:"rolekbum", title:"Kaput Rolek buszon flash", src:"clips/plays5.mp4"},
     {id:"pomocy", title:"Pomocyyyy", src:"clips/plays6.mp4"}
   ]},
-  { id:"rage", name:"Rage", type:"video", items:[
-    {id:"rage1", title:"Rage quit", src:"clips/clip.mp4"},
-    {id:"rage2", title:"Total rage", src:"clips/clip.mp4"}
+  { id:"krzyk", name:"Krzyk Roku", type:"video", items:[
+    {id:"dobrabuszon", title:"dobra buszon", src:"clips/krzyk.mp4"},
+    {id:"julkawrona", title:"Julka Wrona", src:"clips/krzyk2.mp4"},
+    {id:"julkaaaaaaaaaaaa", title:"julkaaaaaaaaaaaa", src:"clips/krzyk3.mp4"},
+    {id:"majaskinwalker", title:"maja i skinwalker", src:"clips/krzyk4.mp4"},
+    {id:"majagenshin", title:"Maja i Przygoty Genshińskie", src:"clips/krzyk5.mp4"}
   ]},
   ...Array.from({length:27}).map((_,i)=>({
     id:`category_${i+4}`,
