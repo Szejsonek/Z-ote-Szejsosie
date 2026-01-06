@@ -7,12 +7,12 @@ const categories = [
       {
         id: "sa1",
         title: "Szejson moment 1",
-        src: "clips/clip1.mp4"
+        src: "clips/clip.mp4"
       },
       {
         id: "sa2",
         title: "Szejson moment 2",
-        src: "clips/clip1.mp4"
+        src: "clips/clip.mp4"
       }
     ]
   },
@@ -25,12 +25,12 @@ const categories = [
       {
         id: "krzyk1",
         title: "Krzyk level 100",
-        src: "clips/clip1.mp4"
+        src: "clips/clip.mp4"
       },
       {
         id: "krzyk2",
         title: "Krzyk ultimate",
-        src: "clips/clip1.mp4"
+        src: "clips/clip.mp4"
       }
     ]
   },
@@ -43,12 +43,12 @@ const categories = [
       {
         id: "rage1",
         title: "Rage quit",
-        src: "clips/clip1.mp4"
+        src: "clips/clip.mp4"
       },
       {
         id: "rage2",
         title: "Total rage",
-        src: "clips/clip1.mp4"
+        src: "clips/clip.mp4"
       }
     ]
   },
