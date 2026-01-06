@@ -1,10 +1,26 @@
+// 🔥 FIREBASE – TU POTEM WKLEISZ SWOJE DANE
+const firebaseConfig = {
+  apiKey: "TU_WKLEISZ",
+  authDomain: "TU_WKLEISZ",
+  projectId: "TU_WKLEISZ"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+// APP
 let currentCategory = 0;
 let selectedItem = null;
-let votes = {};
+let userId = localStorage.getItem("userId");
+
+if (!userId) {
+  userId = crypto.randomUUID();
+  localStorage.setItem("userId", userId);
+}
 
 function startVoting() {
   const nick = document.getElementById("nickname").value.trim();
-  if (!nick) return alert("Wpisz pseudonim!");
+  if (!nick) return alert("Wpisz pseudonim");
 
   localStorage.setItem("nickname", nick);
 
@@ -15,29 +31,41 @@ function startVoting() {
 }
 
 function renderCategory() {
-  const category = categories[currentCategory];
-  document.getElementById("category-name").innerText = category.name;
-  document.getElementById("progress").innerText =
-    `${currentCategory + 1} / ${categories.length}`;
+  const screen = document.getElementById("voting-screen");
+  screen.classList.add("fade-out");
 
-  const container = document.getElementById("items");
-  container.innerHTML = "";
-  selectedItem = null;
-  document.getElementById("next-btn").disabled = true;
+  setTimeout(() => {
+    screen.classList.remove("fade-out");
+    screen.classList.add("fade-in");
 
-  category.items.forEach(item => {
-    const div = document.createElement("div");
-    div.className = "item";
-    div.onclick = () => selectItem(div, item.id);
+    const cat = categories[currentCategory];
+    document.getElementById("category-name").innerText = cat.name;
+    document.getElementById("progress").innerText =
+      `${currentCategory + 1} / ${categories.length}`;
 
-    if (category.type === "video") {
-      div.innerHTML = `<video src="${item.src}" controls></video><p>${item.title}</p>`;
-    } else {
-      div.innerHTML = `<img src="${item.src}"><p>${item.title}</p>`;
-    }
+    const container = document.getElementById("items");
+    container.innerHTML = "";
+    selectedItem = null;
+    document.getElementById("next-btn").disabled = true;
 
-    container.appendChild(div);
-  });
+    cat.items.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "item";
+      div.onclick = () => selectItem(div, item.id);
+
+      if (cat.type === "video") {
+        if (item.src.includes("outplayed.tv")) {
+          div.innerHTML = `<img src="images/logo.png"><p>${item.title}<br>(Outplayed)</p>`;
+        } else {
+          div.innerHTML = `<video src="${item.src}" controls></video><p>${item.title}</p>`;
+        }
+      } else {
+        div.innerHTML = `<img src="${item.src}"><p>${item.title}</p>`;
+      }
+
+      container.appendChild(div);
+    });
+  }, 300);
 }
 
 function selectItem(div, id) {
@@ -47,23 +75,23 @@ function selectItem(div, id) {
   document.getElementById("next-btn").disabled = false;
 }
 
-function nextCategory() {
-  const category = categories[currentCategory];
-  votes[category.id] = selectedItem;
+async function nextCategory() {
+  const cat = categories[currentCategory];
+
+  await db.collection("votes").add({
+    userId,
+    nickname: localStorage.getItem("nickname"),
+    categoryId: cat.id,
+    itemId: selectedItem,
+    time: Date.now()
+  });
 
   currentCategory++;
 
   if (currentCategory >= categories.length) {
-    finishVoting();
+    document.getElementById("voting-screen").classList.remove("active");
+    document.getElementById("finish-screen").classList.add("active");
   } else {
     renderCategory();
   }
 }
-
-function finishVoting() {
-  document.getElementById("voting-screen").classList.remove("active");
-  document.getElementById("finish-screen").classList.add("active");
-
-  console.log("GŁOSY:", votes);
-}
-
