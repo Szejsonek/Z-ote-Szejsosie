@@ -1,12 +1,12 @@
 // 🔹 FIREBASE CONFIG – wklej swoje wartości z Web App
 const firebaseConfig = {
-  apiKey: "TU_WKLEISZ",
-  authDomain: "TU_WKLEISZ",
-  projectId: "TU_WKLEISZ",
-  storageBucket: "TU_WKLEISZ",
-  messagingSenderId: "TU_WKLEISZ",
-  appId: "TU_WKLEISZ",
-  measurementId: "TU_WKLEISZ"
+  apiKey: "AIzaSyDpqu9KUUeyMhN3OJeFIdn6EaKS8jT8PD4",
+  authDomain: "zloteszejsosie.firebaseapp.com",
+  projectId: "zloteszejsosie",
+  storageBucket: "zloteszejsosie.firebasestorage.app",
+  messagingSenderId: "166508890344",
+  appId: "1:166508890344:web:08739ba541a5cd934fa15d",
+  measurementId: "G-1H7QXZMBVL"
 };
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
