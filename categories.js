@@ -1,6 +1,6 @@
 const categories = [
   { id:"szejson_activity", name:"Szejson Activity", type:"video", items:[
-    {id:"sa1", title:"Szejson moment 1", src:"clips/clip.mp4"},
+    {id:"sa1", title:"Szejson moment 1", src:"clips/clip1.mp4"},
     {id:"sa2", title:"Szejson moment 2", src:"clips/clip.mp4"}
   ]},
   { id:"best_scream", name:"Najlepszy Krzyk", type:"video", items:[
