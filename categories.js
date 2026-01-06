@@ -5,9 +5,13 @@ const categories = [
     {id:"sa2", title:"Antol Zacinak", src:"clips/glosy3.mp4"},
     {id:"sa2", title:"działający mikrofon", src:"clips/glosy4.mp4"}
   ]},
-  { id:"best_scream", name:"Najlepszy Krzyk", type:"video", items:[
-    {id:"krzyk1", title:"Krzyk level 100", src:"clips/clip.mp4"},
-    {id:"krzyk2", title:"Krzyk ultimate", src:"clips/clip.mp4"}
+  { id:"playsofyear", name:"Plays Roku", type:"video", items:[
+    {id:"agenci", title:"Angent ant i szej", src:"clips/plays.mp4"},
+    {id:"ultyrolka", title:"Możesz użyć ulta", src:"clips/plays2.mp4"},
+    {id:"majuranegv", title:"Majura Prime", src:"clips/plays3.mp4"},
+    {id:"decoy", title:"decoy", src:"clips/plays4.mp4"},
+    {id:"rolekbum", title:"Kaput Rolek buszon flash", src:"clips/plays5.mp4"},
+    {id:"pomocy", title:"Pomocyyyy", src:"clips/plays6.mp4"}
   ]},
   { id:"rage", name:"Rage", type:"video", items:[
     {id:"rage1", title:"Rage quit", src:"clips/clip.mp4"},
