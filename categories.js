@@ -20,13 +20,14 @@ const categories = [
     {id:"majaskinwalker", title:"maja i skinwalker", src:"clips/krzyk4.mp4"},
     {id:"majagenshin", title:"Maja i Przygoty Genshińskie", src:"clips/krzyk5.mp4"}
   ]},
-    { id:"300iq", name:"Szejson Activity", type:"video", items:[
-    {id:"dobrabuszon", title:"dobra buszon", src:"clips/szej.mp4"},
-    {id:"julkawrona", title:"Julka Wrona", src:"clips/szej2.mp4"},
-    {id:"julkaaaaaaaaaaaa", title:"julkaaaaaaaaaaaa", src:"clips/szej3.mp4"},
-    {id:"majaskinwalker", title:"maja i skinwalker", src:"clips/szej4.mp4"},
-    {id:"majagenshin", title:"Maja i Przygoty Genshińskie", src:"clips/szej5.mp4"}
-  ]},
+    { id:"outplay", name:"Outplay Roku", type:"video", items:[
+    {id:"malzahar", title:"Najcięższe combo w historii", src:"clips/out.mp4"},
+    {id:"majaakali", title:"Maja klika", src:"clips/out2.mp4"},
+    {id:"buszonarena", title:"buszon żyje w 11 września 2001", src:"clips/out3.mp4"},
+    {id:"szejshaco", title:"shaco z wariatkowa", src:"clips/out4.mp4"},
+    {id:"buszonpentasamira", title:"buszońskie combo", src:"clips/out5.mp4"},
+    {id:"buszontopszej", title:"samira borken a camile leci 5km", src:"clips/out6.mp4"}
+  ]}, 
   ...Array.from({length:27}).map((_,i)=>({
     id:`category_${i+4}`,
     name:`Kategoria ${i+4}`,
