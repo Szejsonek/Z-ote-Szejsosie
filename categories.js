@@ -35,6 +35,11 @@ const categories = [
     {id:"ołhelołbackrooms", title:"oł heloł", src:"clips/szejacti4.mp4"},
     {id:"szejatak", title:"nalot na cs2", src:"clips/szejacti5.mp4"}
   ]},
+    { id:"teledysk", name:"Najlepszy Teledysk", type:"image", items:[
+    {id:"yeahcrew", title:"yeah crew ", src:"images/tele1.png"},
+    {id:"rolekbuszko", title:"rolekbuszko", src:"images/tele2.png"},
+    {id:"BombsiteA", title:"Bombsite A", src:"images/tele3.png"}
+  ]},
   
   }))
 ];
