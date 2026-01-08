@@ -2,8 +2,8 @@ const categories = [
   { id:"glosy_niebios", name:"Głosy z Niebios", type:"video", items:[
     {id:"buszonbek", title:"Człowiekue", src:"clips/clip.mp4"},
     {id:"pomozmi", title:"Pomóż mi", src:"clips/glosy2.mp4"},
-    {id:"sa2", title:"Antol Zacinak", src:"clips/glosy3.mp4"},
-    {id:"sa2", title:"działający mikrofon", src:"clips/glosy4.mp4"}
+    {id:"antolezacinaka", title:"Antol Zacinak", src:"clips/glosy3.mp4"},
+    {id:"dzialajacymikofon", title:"działający mikrofon", src:"clips/glosy4.mp4"}
   ]},
   { id:"playsofyear", name:"Plays Roku", type:"video", items:[
     {id:"agenci", title:"Angent ant i szej", src:"clips/plays.mp4"},
@@ -41,5 +41,4 @@ const categories = [
     {id:"BombsiteA", title:"Bombsite A", src:"images/tele3.png"}
   ]}
   
-  }))
 ];
