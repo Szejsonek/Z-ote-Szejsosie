@@ -39,7 +39,7 @@ const categories = [
     {id:"yeahcrew", title:"yeah crew ", src:"images/tele1.png"},
     {id:"rolekbuszko", title:"rolekbuszko", src:"images/tele2.png"},
     {id:"BombsiteA", title:"Bombsite A", src:"images/tele3.png"}
-  ]},
+  ]}
   
   }))
 ];
