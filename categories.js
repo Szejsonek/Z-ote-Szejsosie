@@ -30,10 +30,10 @@ const categories = [
   ]}, 
     { id:"szejactivity", name:"Szej activity", type:"video", items:[
     {id:"papayar", title:"Szejson zostaje Gru", src:"clips/szejacti2.mp4"},
-    {id:"majaakali", title:"Maja klika", src:"clips/szejacti.mp4"},
-    {id:"buszonarena", title:"buszon żyje w 11 września 2001", src:"clips/szejacti3.mp4"},
-    {id:"szejshaco", title:"shaco z wariatkowa", src:"clips/szejacti4.mp4"},
-    {id:"buszonpentasamira", title:"buszońskie combo", src:"clips/szejacti5.mp4"}
+    {id:"backroom szej", title:"Szejson w backrooms", src:"clips/szejacti.mp4"},
+    {id:"szejmajPowPow", title:"Szejson robi Pow Pow Pow z majurom", src:"clips/szejacti3.mp4"},
+    {id:"ołhelołbackrooms", title:"oł heloł", src:"clips/szejacti4.mp4"},
+    {id:"szejatak", title:"nalot na cs2", src:"clips/szejacti5.mp4"}
   ]},
   ...Array.from({length:27}).map((_,i)=>({
     id:`category_${i+4}`,
