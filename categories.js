@@ -35,13 +35,6 @@ const categories = [
     {id:"ołhelołbackrooms", title:"oł heloł", src:"clips/szejacti4.mp4"},
     {id:"szejatak", title:"nalot na cs2", src:"clips/szejacti5.mp4"}
   ]},
-  ...Array.from({length:27}).map((_,i)=>({
-    id:`category_${i+4}`,
-    name:`Kategoria ${i+4}`,
-    type:i%2===0?"video":"image",
-    items:[
-      {id:`item_${i}_1`, title:"Placeholder 1", src:i%2===0?"clips/clip1.mp4":"images/logo.png"},
-      {id:`item_${i}_2`, title:"Placeholder 2", src:i%2===0?"clips/clip1.mp4":"images/logo.png"}
-    ]
+  
   }))
 ];
