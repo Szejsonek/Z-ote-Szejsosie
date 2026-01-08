@@ -1,6 +1,6 @@
 const categories = [
   { id:"glosy_niebios", name:"Głosy z Niebios", type:"video", items:[
-    {id:"buszonbek", title:"Człowiekue", src:"clips/clip.mp4"},
+    {id:"buszonbek", title:"Człowiekuee", src:"clips/clip.mp4"},
     {id:"pomozmi", title:"Pomóż mi", src:"clips/glosy2.mp4"},
     {id:"antolezacinaka", title:"Antol Zacinak", src:"clips/glosy3.mp4"},
     {id:"dzialajacymikofon", title:"działający mikrofon", src:"clips/glosy4.mp4"}
