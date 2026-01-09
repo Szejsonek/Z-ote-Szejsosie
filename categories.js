@@ -54,8 +54,8 @@ const categories = [
   ]},
     { id:"losowymoment", name:"Losowy ahh moment", type:"video", items:[
     {id:"rzutcegla", title:"Rzut cegłą", src:"clips/random.mp4"},
-    {id:"leeee", title:"łeeeeee łeeeeeee łeeeeee", src:"clips/random1.mp4"},
-    {id:"yummi", title:"kicia yummi", src:"clips/random2.mp4"},
-    {id:"buszon", title:"buszon?", src:"clips/random3.mp4"}
+    {id:"leeee", title:"łeeeeee łeeeeeee łeeeeee", src:"clips/random 1.mp4"},
+    {id:"yummi", title:"kicia yummi", src:"clips/random 2.mp4"},
+    {id:"buszon", title:"buszon?", src:"clips/random 3.mp4"}
   ]}
 ];
