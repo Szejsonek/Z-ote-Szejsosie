@@ -45,6 +45,17 @@ const categories = [
     {id:"zlezyodmiejscaiczasu", title:"Zależy od miejsca i czasu", src:"clips/madry2.mp4"},
     {id:"dziwk", title:"dziwk for sale", src:"clips/madry3.mp4"},
     {id:"conajmniejbuzie", title:"co najmniej mam buzię", src:"clips/madry4.mp4"}
+  ]},
+    { id:"300iq", name:"300iq", type:"video", items:[
+    {id:"adamornn", title:"Adam to ornn", src:"clips/iq1.mp4"},
+    {id:"nodebilu", title:"NO debiluuuuuuuu", src:"clips/iq2.mp4"},
+    {id:"trzymajmaja", title:"Trzymaj maja", src:"clips/iq3.mp4"},
+    {id:"kupilesbilety", title:"co najmniej mam buzię", src:"clips/iq4.mp4"}
+  ]},
+    { id:"losowymoment", name:"Losowy ahh moment", type:"video", items:[
+    {id:"rzutcegla", title:"Rzut cegłą", src:"clips/random.mp4"},
+    {id:"leeee", title:"łeeeeee łeeeeeee łeeeeee", src:"clips/random1.mp4"},
+    {id:"yummi", title:"kicia yummi", src:"clips/random2.mp4"},
+    {id:"buszon", title:"buszon?", src:"clips/random3.mp4"}
   ]}
-  
 ];
