@@ -39,6 +39,12 @@ const categories = [
     {id:"yeahcrew", title:"yeah crew ", src:"images/tele1.png"},
     {id:"rolekbuszko", title:"rolekbuszko", src:"images/tele2.png"},
     {id:"BombsiteA", title:"Bombsite A", src:"images/tele3.png"}
+  ]},
+    { id:"madryczlowek", name:"Mądry człowiek kiedyś powiedział", type:"video", items:[
+    {id:"twojamama", title:"Twoja mama nie", src:"clips/madry.mp4"},
+    {id:"zlezyodmiejscaiczasu", title:"Zależy od miejsca i czasu", src:"clips/madry2.mp4"},
+    {id:"dziwk", title:"dziwk for sale", src:"clips/madry3.mp4"},
+    {id:"conajmniejbuzie", title:"co najmniej mam buzię", src:"clips/madry4.mp4"}
   ]}
   
 ];
