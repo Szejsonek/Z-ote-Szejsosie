@@ -78,19 +78,7 @@ async function nextCategory() {
 
   const cat = categories[currentCategory];
 
-  try {
-    await db.collection("votes").add({
-      userId,
-      nickname: localStorage.getItem("nickname"),
-      categoryId: cat.id,
-      itemId: selectedItem,
-      time: Date.now()
-    });
-  } catch (e) {
-    console.error("Błąd zapisu do Firebase:", e);
-    alert("Nie udało się zapisać głosu. Sprawdź połączenie internetowe.");
-    return;
-  }
+
 
   currentCategory++;
 
