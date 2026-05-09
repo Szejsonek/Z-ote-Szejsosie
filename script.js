@@ -2,6 +2,7 @@
 const firebaseConfig = {
   apiKey: "AIzaSyDpqu9KUUeyMhN3OJeFIdn6EaKS8jT8PD4",
   authDomain: "zloteszejsosie.firebaseapp.com",
+  databaseURL: "https://zloteszejsosie-default-rtdb.europe-west1.firebasedatabase.app",
   projectId: "zloteszejsosie",
   storageBucket: "zloteszejsosie.firebasestorage.app",
   messagingSenderId: "166508890344",
